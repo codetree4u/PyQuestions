@@ -10,7 +10,23 @@ Here, 7 is the majority element in the given list. It's because 7 has occurred 4
 
 Assumption: We will assume that the list is non-empty and the majority element is always present in the list.
 """
+# Write code here  
+numbers = [1, 7, 8, 7, 7, 7]
+n = len(numbers)
 
+count=0
+majorityElement=0
+
+for index in range(n):
+    counter =0 
+    for frequency in range(n):
+        if(numbers[index] == numbers[frequency]):
+            counter += 1
+        if(counter > count):
+            count = counter
+            majorityElement = index
+if(count > n//2):
+    print(numbers[majorityElement])
 
 """
 Thought Process
