@@ -39,3 +39,23 @@ In each iteration of the loop, use the count() function to count the number of o
 Check if the element count is greater than n // 2.
 If true, return the element as the majority element.
 """	
+
+
+
+"""
+Thought Process
+There are more than n / 2 instances of the majority element in a list of size n.
+In order to find the majority element, we must first find the number of times each element appears in the list. 
+A built-in method count() in Python counts the number of occurrences of an element.
+
+list.count(element)
+
+Here's how we can solve this problem:
+
+Create a loop to access each list element.
+In each iteration of the loop, use the count() function to count the number of occurrences of each element.
+Check if the element count is greater than n // 2.
+If true, return the element as the majority element.
+"""	
+
+
