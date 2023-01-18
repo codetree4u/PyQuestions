@@ -59,3 +59,16 @@ If true, return the element as the majority element.
 """	
 
 
+# define a function that returns the majority element
+def find_majority_element(num_list):
+
+    # iterate through each number in the list
+    for num in num_list:
+        # if the number of times a number appears
+        # is greater than the length of the list divided by 2,
+        # return the number
+        if num_list.count(num) > len(num_list) // 2:
+            return num
+numbers = [1, 7, 8, 7, 7, 7]
+result = find_majority_element(numbers)
+print(result)
