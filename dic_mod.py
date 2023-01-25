@@ -1,57 +1,62 @@
 """
 Question
-Write a function that can add any number of parameters and print their sum.
+Given a dictionary that contains the name and score of the players as a key-value pair, increment every player's score by 1.
 
-For example, if you call the function with parameters 2 and 3, it should return 5.
+For example,
 
-Also, if you call the function with parameters 5, 4, 3, 2, and 1, it should return 15.
+If the dictionary contains,
+
+{'Cody': 50, 'Jack': 57, 'Seth': 59, 'Roman': 67}
+Increment everyone's score by 1. That means, the dictionary after the update will be,
+
+{'Cody': 51, 'Jack': 58, 'Seth': 60, 'Roman': 68}
 """
 """
+
 Thought Process
-Let's think of functions with parameters. In Python, a function can accept positional arguments and keyword arguments. The number of arguments must match the number of parameters.
+When a for loop is used in a dictionary, it gives us the key of the pair. Using that key, we can get the value in the dictionary.
 
-However, we can use the concept of packing and unpacking to accept as many arguments as we want.
+Let's look at the steps required to do this.
 
-In Python, * is used to pack elements in a tuple and pass that as arguments in a function.
-
-So, we can create a function with *args as arguments and we can use args as a normal tuple in our function.
-
-This is what we can do :
-
-Create a function with *args as a parameter.
-Create a blank sum variable.
-By looping through the args variable, add each element to the sum.
-Print the sum.
+Loop through the dictionary.
+Looping gives us the key in each iteration of loop.
+Using that key, we can select the value and increment it by 1.
+Finally, print the updated dictionary.
 """
 """
 Challenge:
-Add Any Number of Parameters
+Increase Values in a Dictionary
 Easy
 Problem Description
-Create a Python program to add any number of parameters in a function.
+Create a Python program to increment the values of a dictionary by 1.
 
 Example
 Test Input
 
-for function arguments 1, 2, 3, 4, 5
+for a dictionary {'Cody': 50, 'Jack': 57, 'Seth': 59, 'Roman': 67}
 Expected Output
 
-15
+{'Cody': 51, 'Jack': 58, 'Seth': 60, 'Roman': 68}
 """
+# function that increments every player's score by 1
+def incrementer(dictionary):
 
-# define a function that can add any number of arguments
-def adder(___):
+    # for loop that iterates through the dictionary
+    # and increments the score by 1
+    for k,v in dictionary.items():
+        dictionary[k] = v +1
 
-    # initialize the sum variable
-    sum = 0
+    # print the updated dictionary
+    print(dictionary)
 
-    # loop through the arguments and add them to the sum variable
-    for ___:
-        ___
 
-    # print the sum
-    print(sum)
-
+# define the dictionary
+player_scores = {
+    'Cody': 50,
+    'Jack': 57,
+    'Seth': 59,
+    'Roman': 67,
+}
 
 # call the function
-adder(1, 2, 3, 4, 5)
+incrementer(player_scores)
