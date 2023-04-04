@@ -47,7 +47,6 @@ Expected Output
 [9, 2, 20, 24]
 [16, 17, 23, 19]
 """
-# replace ___ with your code
 
 # define a list and empty list to store chunks
 numbers = [2, 3, 6, 7, 3, 5, 7, 8, 9, 2, 20, 24, 16, 17, 23, 19]
